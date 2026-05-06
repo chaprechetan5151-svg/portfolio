@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal portfolio website — First Year CS Student passionate about web development and coding." />
+  <title>Alex Carter | CS Student & Aspiring Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/placeholders.css" />
+</head>
+<body>
+
+  <!-- ===== LOADER ===== -->
+  <div id="loader">
+    <div class="loader-ring"></div>
+    <p class="loader-text">Loading...</p>
+  </div>
+
+  <!-- ===== CURSOR ===== -->
+  <div id="cursor"></div>
+  <div id="cursor-follower"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">AC<span>.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-outline nav-cta">Hire Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <canvas id="particles-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge reveal">👋 Available for work</div>
+      <h1 class="hero-name reveal">
+        Hi, I'm <span class="gradient-text">Alex Carter</span>
+      </h1>
+      <h2 class="hero-role reveal">
+        I'm a <span id="typed-text" class="typed-word"></span><span class="cursor-blink">|</span>
+      </h2>
+      <p class="hero-desc reveal">
+        A passionate 1st Year CS student exploring the world of web development.
+        I love turning ideas into reality with code and learning something new every day.
+      </p>
+      <div class="hero-buttons reveal">
+        <a href="#projects" class="btn btn-primary">View My Work <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#contact" class="btn btn-ghost">Let's Talk <i class="fa-solid fa-paper-plane"></i></a>
+      </div>
+      <div class="hero-socials reveal">
+        <a href="#" class="social-icon" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" class="social-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="social-icon" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal">Who I Am</span>
+        <h2 class="section-title reveal">About <span class="gradient-text">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-wrapper reveal">
+          <div class="about-image-frame">
+            <img src="assets/images/profile.jpg" alt="Alex Carter - Full Stack Developer" id="profile-img" />
+            <div class="image-glow"></div>
+          </div>
+          <div class="about-badge-card">
+            <i class="fa-solid fa-code"></i>
+            <div>
+              <strong>3+</strong>
+              <span>Years Coding</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text reveal">
+          <h3>Crafting Digital Experiences with Passion</h3>
+          <p>
+            I'm a 1st Year Computer Science student (Semester 2), passionate about web development
+            and programming. I started my coding journey recently and I'm already building real projects
+            to grow my skills every single day.
+          </p>
+          <p>
+            When I'm not studying, you'll find me building mini projects, watching coding tutorials,
+            and exploring how the internet works under the hood. I believe consistent effort and curiosity
+            are the best tools a beginner can have.
+          </p>
+          <div class="about-tags">
+            <span class="tag">Problem Solver</span>
+            <span class="tag">Team Player</span>
+            <span class="tag">Fast Learner</span>
+            <span class="tag">Creative</span>
+          </div>
+          <a href="#" class="btn btn-primary" id="download-cv">
+            <i class="fa-solid fa-download"></i> Download CV
+          </a>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
+          <p>Projects Built</p>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-number" data-target="2">0</span><span class="stat-plus"></span>
+          <p>Semesters Done</p>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-number" data-target="10">0</span><span class="stat-plus">+</span>
+          <p>Topics Learned</p>
+        </div>
+        <div class="stat-card reveal">
+          <span class="stat-number" data-target="100">0</span><span class="stat-plus">+</span>
+          <p>Hours of Coding</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal">What I Know</span>
+        <h2 class="section-title reveal">My <span class="gradient-text">Skills</span></h2>
+      </div>
+
+      <div class="skills-tabs reveal">
+        <button class="skill-tab active" data-tab="frontend">Frontend</button>
+        <button class="skill-tab" data-tab="backend">Backend</button>
+        <button class="skill-tab" data-tab="tools">Tools</button>
+      </div>
+
+      <div class="skills-content active" id="tab-frontend">
+        <div class="skill-cards-grid">
+          <div class="skill-card reveal"><i class="fa-brands fa-html5"></i><span>HTML5</span><div class="skill-bar"><div class="skill-fill" data-width="95"></div></div></div>
+          <div class="skill-card reveal"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
+          <div class="skill-card reveal"><i class="fa-brands fa-js"></i><span>JavaScript</span><div class="skill-bar"><div class="skill-fill" data-width="88"></div></div></div>
+          <div class="skill-card reveal"><i class="fa-brands fa-react"></i><span>React</span><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
+          <div class="skill-card reveal"><i class="fa-solid fa-wind"></i><span>Tailwind CSS</span><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
+          <div class="skill-card reveal"><i class="fa-solid fa-mobile-screen"></i><span>Responsive Design</span><div class="skill-bar"><div class="skill-fill" data-width="92"></div></div></div>
+        </div>
+      </div>
+
+      <div class="skills-content" id="tab-backend">
+        <div class="skill-cards-grid">
+          <div class="skill-card reveal"><i class="fa-brands fa-node-js"></i><span>Node.js</span><div class="skill-bar"><div class="skill-fill" data-width="82"></div></div></div>
+          <div class="skill-card reveal"><i class="fa-solid fa-server"></i><span>Express.js</span><div class="skill-bar"><div class="skill-fill" data-width="78"></div></div></div>
+          <div class="skill-card reveal"><i class="fa-solid fa-database"></i><span>MongoDB</span><div class="skill-bar"><div class="skill-fill" data-width="75"></div></div></div>
+          <div class="skill-card reveal"><i class="fa-solid fa-database"></i><span>PostgreSQL</span><div class="skill-bar"><div class="skill-fill" data-width="70"></div></div></div>
+          <div class="skill-card reveal"><i class="fa-brands fa-python"></i><span>Python</span><div class="skill-bar"><div class="skill-fill" data-width="72"></div></div></div>
+          <div class="skill-card reveal"><i class="fa-solid fa-plug"></i><span>REST APIs</span><div class="skill-bar"><div class="skill-fill" data-width="88"></div></div></div>
+        </div>
+      </div>
+
+      <div class="skills-content" id="tab-tools">
+        <div class="skill-cards-grid">
+          <div class="skill-card reveal"><i class="fa-brands fa-git-alt"></i><span>Git</span><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
+          <div class="skill-card reveal"><i class="fa-brands fa-github"></i><span>GitHub</span><div class="skill-bar"><div class="skill-fill" data-width="88"></div></div></div>
+          <div class="skill-card reveal"><i class="fa-brands fa-docker"></i><span>Docker</span><div class="skill-bar"><div class="skill-fill" data-width="65"></div></div></div>
+          <div class="skill-card reveal"><i class="fa-solid fa-cloud"></i><span>AWS Basics</span><div class="skill-bar"><div class="skill-fill" data-width="60"></div></div></div>
+          <div class="skill-card reveal"><i class="fa-solid fa-pen-ruler"></i><span>Figma</span><div class="skill-bar"><div class="skill-fill" data-width="75"></div></div></div>
+          <div class="skill-card reveal"><i class="fa-solid fa-terminal"></i><span>VS Code</span><div class="skill-bar"><div class="skill-fill" data-width="95"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal">What I've Built</span>
+        <h2 class="section-title reveal">Featured <span class="gradient-text">Projects</span></h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card reveal" id="project-1">
+          <div class="project-image">
+            <img src="assets/images/project1.jpg" alt="E-Commerce Platform" />
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="#" class="btn btn-sm btn-outline">GitHub <i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="ptag">React</span><span class="ptag">Node.js</span><span class="ptag">MongoDB</span>
+            </div>
+            <h3>E-Commerce Platform</h3>
+            <p>A full-featured online store with cart, payments, and admin dashboard. Built with MERN stack.</p>
+          </div>
+        </div>
+
+        <div class="project-card reveal" id="project-2">
+          <div class="project-image">
+            <img src="assets/images/project2.jpg" alt="Task Manager App" />
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="#" class="btn btn-sm btn-outline">GitHub <i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="ptag">JavaScript</span><span class="ptag">CSS3</span><span class="ptag">LocalStorage</span>
+            </div>
+            <h3>Task Manager App</h3>
+            <p>A beautiful drag-and-drop task manager with priority labels, due dates, and progress tracking.</p>
+          </div>
+        </div>
+
+        <div class="project-card reveal" id="project-3">
+          <div class="project-image">
+            <img src="assets/images/project3.jpg" alt="Weather Dashboard" />
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="#" class="btn btn-sm btn-outline">GitHub <i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="ptag">API</span><span class="ptag">JavaScript</span><span class="ptag">Charts.js</span>
+            </div>
+            <h3>Weather Dashboard</h3>
+            <p>Real-time weather app with 7-day forecast, animated icons, and location-based detection.</p>
+          </div>
+        </div>
+
+        <div class="project-card reveal" id="project-4">
+          <div class="project-image">
+            <img src="assets/images/project4.jpg" alt="Chat Application" />
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="#" class="btn btn-sm btn-outline">GitHub <i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="ptag">Socket.io</span><span class="ptag">Node.js</span><span class="ptag">Express</span>
+            </div>
+            <h3>Real-Time Chat App</h3>
+            <p>Multiplayer chat application with rooms, emoji support, and real-time message delivery.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="projects-cta reveal">
+        <a href="#" class="btn btn-ghost">View All Projects on GitHub <i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal">My Journey</span>
+        <h2 class="section-title reveal">Experience & <span class="gradient-text">Education</span></h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item reveal" id="tl-1">
+          <div class="timeline-dot"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2024 — Present</span>
+            <h3>B.Sc. Computer Science</h3>
+            <h4>University · 1st Year, Semester 2</h4>
+            <p>Currently studying core CS subjects including Programming Fundamentals, Data Structures, Mathematics, and Introduction to Web Development.</p>
+            <div class="timeline-tags">
+              <span class="tag">C Programming</span><span class="tag">HTML/CSS</span><span class="tag">Mathematics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" id="tl-2">
+          <div class="timeline-dot"><i class="fa-solid fa-laptop-code"></i></div>
+          <div class="timeline-card">
+            <span class="timeline-date">Early 2025</span>
+            <h3>Started Web Development</h3>
+            <h4>Self-Taught · Personal Projects</h4>
+            <p>Began learning HTML, CSS, and JavaScript through online resources. Built my first static websites and started this portfolio as a learning project.</p>
+            <div class="timeline-tags">
+              <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" id="tl-3">
+          <div class="timeline-dot"><i class="fa-solid fa-code"></i></div>
+          <div class="timeline-card">
+            <span class="timeline-date">Semester 1 · 2024</span>
+            <h3>Learned C Programming</h3>
+            <h4>University Course · Completed</h4>
+            <p>Completed my first programming course in C. Learned variables, loops, functions, arrays, and basic problem solving fundamentals.</p>
+            <div class="timeline-tags">
+              <span class="tag">C Language</span><span class="tag">Algorithms</span><span class="tag">Logic Building</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" id="tl-4">
+          <div class="timeline-dot"><i class="fa-solid fa-rocket"></i></div>
+          <div class="timeline-card">
+            <span class="timeline-date">Goal · 2025</span>
+            <h3>First Internship 🎯</h3>
+            <h4>Actively Preparing</h4>
+            <p>My current goal is to land my first internship or freelance project by the end of my 2nd year. Building projects and learning every day to get there!</p>
+            <div class="timeline-tags">
+              <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">In Progress</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal">Get In Touch</span>
+        <h2 class="section-title reveal">Let's <span class="gradient-text">Connect</span></h2>
+        <p class="section-subtitle reveal">Have a project in mind or just want to say hi? My inbox is always open.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-card">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <strong>Email</strong>
+              <span>alex.carter@email.com</span>
+            </div>
+          </div>
+          <div class="contact-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Location</strong>
+              <span>New York, USA</span>
+            </div>
+          </div>
+          <div class="contact-card">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <strong>Availability</strong>
+              <span>Open to opportunities</span>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="#" class="social-icon lg" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="social-icon lg" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" class="social-icon lg" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project Inquiry" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+            <span>Send Message</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+          <div class="form-success" id="form-success">
+            <i class="fa-solid fa-circle-check"></i> Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="container footer-inner">
+      <a href="#hero" class="nav-logo footer-logo">AC<span>.</span></a>
+      <p>Designed & Built by <strong>Alex Carter</strong> · 2024</p>
+      <a href="#hero" class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

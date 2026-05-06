@@ -1,0 +1,34 @@
+/* ===== PROJECT IMAGE PLACEHOLDERS ===== */
+/* Gradient placeholders shown when real images aren't present */
+#project-1 .project-image { background: linear-gradient(135deg, #1e1b4b, #312e81); }
+#project-2 .project-image { background: linear-gradient(135deg, #0c4a6e, #0e7490); }
+#project-3 .project-image { background: linear-gradient(135deg, #14532d, #166534); }
+#project-4 .project-image { background: linear-gradient(135deg, #4c0519, #881337); }
+
+#project-1 .project-image img,
+#project-2 .project-image img,
+#project-3 .project-image img,
+#project-4 .project-image img {
+  display: none; /* hide broken images, show gradient bg */
+}
+
+/* Show placeholder icon */
+#project-1 .project-image::after { content: '🛒'; }
+#project-2 .project-image::after { content: '✅'; }
+#project-3 .project-image::after { content: '🌤️'; }
+#project-4 .project-image::after { content: '💬'; }
+
+.project-image::after {
+  font-size: 4rem;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+.project-image { min-height: 200px; display: flex; align-items: center; justify-content: center; }
+
+/* Profile image fallback */
+#profile-img {
+  background: linear-gradient(135deg, #1e1b4b, #312e81);
+  min-height: 400px;
+}
