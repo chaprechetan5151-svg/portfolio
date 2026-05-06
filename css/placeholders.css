@@ -27,8 +27,25 @@
 }
 .project-image { min-height: 200px; display: flex; align-items: center; justify-content: center; }
 
-/* Profile image fallback */
+/* Profile image fallback - styled avatar placeholder */
+.about-image-frame {
+  position: relative;
+}
 #profile-img {
-  background: linear-gradient(135deg, #1e1b4b, #312e81);
-  min-height: 400px;
+  display: none; /* hide broken image tag */
+}
+.about-image-frame::before {
+  content: 'CC';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 420px;
+  background: linear-gradient(135deg, #1e1035, #0f2744, #0c1a3a);
+  font-family: 'Outfit', sans-serif;
+  font-size: 6rem;
+  font-weight: 900;
+  color: rgba(124, 58, 237, 0.5);
+  letter-spacing: 4px;
+  border-radius: 16px;
 }
